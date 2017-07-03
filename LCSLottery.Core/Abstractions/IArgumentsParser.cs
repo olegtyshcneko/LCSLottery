@@ -4,6 +4,6 @@ namespace LCSLottery.Core.Abstractions
 {
     public interface IArgumentsParser
     {
-        Result<ParsedArguments> Read(string[] args);
+        Result<ParsedArguments> Parse(string[] args);
     }
 }

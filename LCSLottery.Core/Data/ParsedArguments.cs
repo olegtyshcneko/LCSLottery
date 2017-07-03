@@ -4,7 +4,7 @@ namespace LCSLottery.Core.Data
 {
     public class ParsedArguments
     {
-        public FileStream InputFile { get; set; }
+        public StreamReader InputFileReader { get; set; }
 
         public string WinningNumber { get; set; }
     }
