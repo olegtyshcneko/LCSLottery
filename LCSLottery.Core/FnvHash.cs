@@ -3,10 +3,10 @@ namespace LCSLottery.Core
     //Simple and fast hashing algorithm that I will be using for comparing objects
     public static class FnvHash
     {
-        public static uint Hash(string data)
+        public static int Hash(string data)
         {
-            const uint fnvPrimeNumber = 0x811C9DC5;
-            uint hash = 0;
+            const int fnvPrimeNumber = 0x122C9DC5;
+            int hash = 0;
             for(var i=0; i<data.Length; i++)
             {
                 hash *= fnvPrimeNumber;
