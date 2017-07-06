@@ -60,7 +60,6 @@ namespace LCSLottery.Tests
             Assert.True(IsErrorAssert(participantsResult));
         }
 
-        //NOTE: validation logic usually is put in separate class/module, but here it is very simple, so I've decided to keep it inside inputreader
         [Fact]
         public void If_Lottery_Number_Is_Not_Valid_Should_Return_Error() 
         {
