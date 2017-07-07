@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.IO;
 
 namespace LCSLottery.Tests.TestData
 {
@@ -58,6 +59,22 @@ namespace LCSLottery.Tests.TestData
             {
                 "Alison,Alice,Austria,",
             };
+        }
+        
+        public static StreamReader CreatedMockedStreamReader(string[] data)
+        {
+            var memoryStream = new MemoryStream();
+            var streamWriter = new StreamWriter(memoryStream);
+
+            foreach(var s in data)
+            {
+                streamWriter.WriteLine(s);
+            }
+            
+            streamWriter.Flush();
+            memoryStream.Seek(0, SeekOrigin.Begin);
+
+            return new StreamReader(memoryStream);
         }
     }
 }
