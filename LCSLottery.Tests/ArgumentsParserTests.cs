@@ -1,19 +1,25 @@
 using System;
-using Xunit;
-using System.Collections.Generic;
 using System.IO;
+using LCSLottery.Core;
 using LCSLottery.Core.Abstractions;
+using LCSLottery.Core.Data;
 using LCSLottery.Core.Data.Enums;
+using LCSLottery.Core.Implementations;
 using LCSLottery.Tests.TestData;
+using Xunit;
+using Moq;
 
 namespace LCSLottery.Tests 
 {
     public class ArgumentsParserTests
     {
         private IArgumentsParser argumentsParser;
+        private Mock<IFileOpener> fileOpenerMock;
 
         public ArgumentsParserTests()
         {
+            SetupFileOpenerMock();
+            argumentsParser = new ArgumentsParser(fileOpenerMock.Object);
         }
 
         [Theory]
@@ -85,6 +91,19 @@ namespace LCSLottery.Tests
             
             Assert.True(argumentsReadResult.Status == ResultStatus.Error);
             Assert.False(string.IsNullOrWhiteSpace(argumentsReadResult.ErrorMessage));
+        }
+        
+        private void SetupFileOpenerMock()
+        {
+            fileOpenerMock = new Mock<IFileOpener>();
+            
+            fileOpenerMock.Setup(fo => fo.Open(ArgumentsTestData.CorrectFilePath))
+                .Returns(Stream.Null);
+
+            fileOpenerMock.Setup(fo => fo.Open(ArgumentsTestData.WrongFilePath)).Throws<IOException>();
+
+            fileOpenerMock.Setup(fo => fo.Exists(ArgumentsTestData.CorrectFilePath)).Returns(true);
+            fileOpenerMock.Setup(fo => fo.Exists(ArgumentsTestData.WrongFilePath)).Returns(false);
         }
     }
 }
