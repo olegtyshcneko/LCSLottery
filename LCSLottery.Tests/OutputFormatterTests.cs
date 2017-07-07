@@ -1,5 +1,6 @@
 ﻿using LCSLottery.Core.Abstractions;
 using LCSLottery.Core.Data;
+using LCSLottery.Core.Implementations;
 using Xunit;
 
 namespace LCSLottery.Tests
@@ -21,6 +22,8 @@ namespace LCSLottery.Tests
                 Country = "Austria",
                 LotteryNumber = "1234567890"
             };
+            
+            outputFormatter = new OutputFormatter();
         }
 
         [Fact]

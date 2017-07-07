@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b488f64-5311-4966-82a2-834a7133e4a7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LCSLottery.Core/Implementations/InputReader.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.LCSLottery/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.LCSLottery/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LCSLottery.Core/Data/Constants/TextConstants.cs" afterPath="$PROJECT_DIR$/LCSLottery.Core/Data/Constants/TextConstants.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LCSLottery.Tests/InputReaderTests.cs" afterPath="$PROJECT_DIR$/LCSLottery.Tests/InputReaderTests.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LCSLottery.Core/Implementations/OutputFormatter.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LCSLottery.Tests/OutputFormatterTests.cs" afterPath="$PROJECT_DIR$/LCSLottery.Tests/OutputFormatterTests.cs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArgumentsParserTests.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ArgumentsParserTests.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LCSLottery.Tests/ArgumentsParserTests.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="41" column="9" lean-forward="false" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+            <state relative-caret-position="168">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
                 <marker date="1499414605000" expanded="false" signature="6:247" ph="..." />
                 <marker date="1499414605000" expanded="true" signature="276:4550" ph="{...}" />
@@ -70,6 +68,23 @@
                 <marker date="1499414605000" expanded="true" signature="3240:3549" ph="{...}" />
                 <marker date="1499414605000" expanded="true" signature="3651:3976" ph="{...}" />
                 <marker date="1499414605000" expanded="true" signature="4028:4542" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OutputFormatterTests.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LCSLottery.Tests/OutputFormatterTests.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+              <folding>
+                <marker date="1499416322000" expanded="true" signature="6:115" ph="..." />
+                <marker date="1499416322000" expanded="true" signature="143:1142" ph="{...}" />
+                <marker date="1499416322000" expanded="true" signature="183:1140" ph="{...}" />
+                <marker date="1499416322000" expanded="true" signature="392:724" ph="{...}" />
+                <marker date="1499416322000" expanded="true" signature="476:647" ph="{...}" />
+                <marker date="1499416322000" expanded="true" signature="878:1134" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -144,7 +159,6 @@
         <option value="$PROJECT_DIR$/LCSLottery.Core/LcsSolver.cs" />
         <option value="$PROJECT_DIR$/LCSLottery.Core/Data/ParticipantEntity.cs" />
         <option value="$PROJECT_DIR$/LCSLottery.Core/Abstractions/IOutputFormatter.cs" />
-        <option value="$PROJECT_DIR$/LCSLottery.Tests/OutputFormatterTests.cs" />
         <option value="$PROJECT_DIR$/LCSLottery.Tests/TestData/InputReaderTestData.cs" />
         <option value="$PROJECT_DIR$/LCSLottery.Core/Abstractions/IFileOpener.cs" />
         <option value="$PROJECT_DIR$/LCSLottery.Core/Implementations/ArgumentsParser.cs" />
@@ -152,6 +166,8 @@
         <option value="$PROJECT_DIR$/LCSLottery.Core/Data/Constants/TextConstants.cs" />
         <option value="$PROJECT_DIR$/LCSLottery.Core/Implementations/InputReader.cs" />
         <option value="$PROJECT_DIR$/LCSLottery.Tests/InputReaderTests.cs" />
+        <option value="$PROJECT_DIR$/LCSLottery.Core/Implementations/OutputFormatter.cs" />
+        <option value="$PROJECT_DIR$/LCSLottery.Tests/OutputFormatterTests.cs" />
       </list>
     </option>
   </component>
@@ -379,12 +395,12 @@
       <workItem from="1499338462026" duration="79000" />
       <workItem from="1499339740817" duration="778000" />
       <workItem from="1499348194785" duration="324000" />
-      <workItem from="1499369802010" duration="6468000" />
+      <workItem from="1499369802010" duration="6705000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9038000" />
+    <option name="totallyTimeSpent" value="9275000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -709,21 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LCSLottery.Tests/OutputFormatterTests.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-          <folding>
-            <marker date="1499411306000" expanded="true" signature="6:76" ph="..." />
-            <marker date="1499411306000" expanded="true" signature="104:1037" ph="{...}" />
-            <marker date="1499411306000" expanded="true" signature="144:1035" ph="{...}" />
-            <marker date="1499411306000" expanded="true" signature="353:619" ph="{...}" />
-            <marker date="1499411306000" expanded="true" signature="437:608" ph="{...}" />
-            <marker date="1499411306000" expanded="true" signature="773:1029" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LCSLottery.Tests/LcsSolverTests.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -873,8 +874,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LCSLottery.Tests/ArgumentsParserTests.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="41" column="9" lean-forward="false" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+        <state relative-caret-position="168">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <marker date="1499414605000" expanded="false" signature="6:247" ph="..." />
             <marker date="1499414605000" expanded="true" signature="276:4550" ph="{...}" />
@@ -887,6 +888,35 @@
             <marker date="1499414605000" expanded="true" signature="3240:3549" ph="{...}" />
             <marker date="1499414605000" expanded="true" signature="3651:3976" ph="{...}" />
             <marker date="1499414605000" expanded="true" signature="4028:4542" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LCSLottery.Core/Implementations/OutputFormatter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <marker date="1499416309000" expanded="true" signature="6:63" ph="..." />
+            <marker date="1499416309000" expanded="true" signature="106:525" ph="{...}" />
+            <marker date="1499416309000" expanded="true" signature="160:523" ph="{...}" />
+            <marker date="1499416309000" expanded="true" signature="257:517" ph="{...}" />
+            <marker date="1499416309000" expanded="true" signature="280:421" ph="/* NOTE: as example of potential bad code, ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LCSLottery.Tests/OutputFormatterTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+          <folding>
+            <marker date="1499416322000" expanded="true" signature="6:115" ph="..." />
+            <marker date="1499416322000" expanded="true" signature="143:1142" ph="{...}" />
+            <marker date="1499416322000" expanded="true" signature="183:1140" ph="{...}" />
+            <marker date="1499416322000" expanded="true" signature="392:724" ph="{...}" />
+            <marker date="1499416322000" expanded="true" signature="476:647" ph="{...}" />
+            <marker date="1499416322000" expanded="true" signature="878:1134" ph="{...}" />
           </folding>
         </state>
       </provider>
