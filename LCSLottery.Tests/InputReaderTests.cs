@@ -1,17 +1,20 @@
-using System;
-using System.IO;
-using System.Collections.Generic;
 using LCSLottery.Tests.TestData;
 using Xunit;
 using LCSLottery.Core.Data;
 using LCSLottery.Core.Data.Enums;
 using LCSLottery.Core.Abstractions;
+using LCSLottery.Core.Implementations;
 
 namespace LCSLottery.Tests
 {
     public class InputReaderTests
     {
         private IInputReader inputReader;
+
+        public InputReaderTests()
+        {
+            inputReader = new InputReader();
+        }
 
         [Fact]
         public void If_Input_Is_Correctly_Formatted_Return_Parsed_Array_Of_Participants()
