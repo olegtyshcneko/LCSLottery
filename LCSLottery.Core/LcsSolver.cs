@@ -2,6 +2,10 @@
 
 namespace LCSLottery.Core
 {
+    //NOTE: I know it can be considered bad practice using static classes
+    //But I don't see how using abstraction here or creating instance can help
+    //It just a plain function solving algorithmic problem, if we will want to change algo
+    //we can do it here
     public static class LcsSolver
     {
         private const string lotteryNumberNotValidExceptionMessage = "Lottery number is not valid.";
@@ -25,9 +29,9 @@ namespace LCSLottery.Core
                 solution[i, 0] = "0";
             }
 
-            for (int i = 1; i <= first.Length; i++)
+            for (var i = 1; i <= first.Length; i++)
             {
-                for (int j = 1; j <= second.Length; j++)
+                for (var j = 1; j <= second.Length; j++)
                 {
                     if (first[i - 1] == second[j - 1])
                     {
@@ -39,7 +43,6 @@ namespace LCSLottery.Core
                     }
                 }
             }
-
 
             return lcs[first.Length, second.Length];
         }

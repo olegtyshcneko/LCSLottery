@@ -66,5 +66,25 @@ namespace LCSLottery.Tests
             Assert.Null(argumentsReadResult.Data);
             Assert.False(string.IsNullOrWhiteSpace(argumentsReadResult.ErrorMessage));
         }
+        
+        [Fact]
+        public void Should_Return_Error_If_There_Is_Less_Than_Two_Arguments()
+        {
+            var args = new string[] { "arg" };
+            var argumentsReadResult = argumentsParser.Parse(args);
+            
+            Assert.True(argumentsReadResult.Status == ResultStatus.Error);
+            Assert.False(string.IsNullOrWhiteSpace(argumentsReadResult.ErrorMessage));
+        }
+        
+        [Fact]
+        public void Should_Return_Error_If_There_Is_More_Than_Two_Arguments()
+        {
+            var args = new string[] { "arg", "arg2", "arg3" };
+            var argumentsReadResult = argumentsParser.Parse(args);
+            
+            Assert.True(argumentsReadResult.Status == ResultStatus.Error);
+            Assert.False(string.IsNullOrWhiteSpace(argumentsReadResult.ErrorMessage));
+        }
     }
 }

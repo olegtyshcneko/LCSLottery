@@ -10,13 +10,7 @@ namespace LCSLottery.Core.Data
 
         public string LotteryNumber { get; set; }
 
-        public string FormattedParticipant
-        {
-            get 
-            {
-                return $"{FirstName},{LastName},{Country}";
-            }
-        }
+        public string FormattedParticipant => $"{FirstName},{LastName},{Country}";
 
         public bool IsDuplicate(ParticipantEntity otherParticipant)
         {
